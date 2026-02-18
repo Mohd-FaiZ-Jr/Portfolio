@@ -2,22 +2,22 @@ import React, { useMemo } from "react";
 import Marquee from "react-fast-marquee";
 
 const MARQUEE_ITEMS = [
-    { src: "src/assets/Marquee Icons/html.png", width: 45, alt: "HTML5" },
-    { src: "src/assets/Marquee Icons/css.png", width: 55, alt: "CSS3" },
-    { src: "src/assets/Marquee Icons/js.png", width: 45, alt: "JavaScript" },
+    { src: "/html.png", width: 45, alt: "HTML5" },
+    { src: "/css.png", width: 55, alt: "CSS3" },
+    { src: "/js.png", width: 45, alt: "JavaScript" },
     // NEW
-    { src: "src/assets/Marquee Icons/react.png", width: 48, alt: "React" },
-    { src: "src/assets/Marquee Icons/figma.png", width: 45, alt: "Figma" },
-    { src: "src/assets/Marquee Icons/tailwind.png", width: 45, alt: "Tailwind CSS" },
+    { src: "/react.png", width: 48, alt: "React" },
+    { src: "/figma.png", width: 45, alt: "Figma" },
+    { src: "/tailwind.png", width: 45, alt: "Tailwind CSS" },
     // NEW
-    { src: "src/assets/Marquee Icons/nodejs.png", width: 48, alt: "Node.js" },
-    { src: "src/assets/Marquee Icons/github.png", width: 45, alt: "GitHub" },
-    { src: "src/assets/Marquee Icons/vite.png", width: 45, alt: "Vite" },
-    { src: "src/assets/Marquee Icons/vscode.png", width: 45, alt: "VS Code" },
+    { src: "/nodejs.png", width: 48, alt: "Node.js" },
+    { src: "/github.png", width: 45, alt: "GitHub" },
+    { src: "/vite.png", width: 45, alt: "Vite" },
+    { src: "/vscode.png", width: 45, alt: "VS Code" },
     // NEW
-    { src: "src/assets/Marquee Icons/mysql.png", width: 52, alt: "MySQL" },
-    { src: "src/assets/Marquee Icons/python.png", width: 42, alt: "Python" },
-    { src: "src/assets/Marquee Icons/social.png", width: 45, alt: "Social" },
+    { src: "/mysql.png", width: 52, alt: "MySQL" },
+    { src: "/python.png", width: 42, alt: "Python" },
+    { src: "/social.png", width: 45, alt: "Social" },
 ];
 
 const MarqueItem = () => {

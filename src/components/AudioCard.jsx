@@ -69,7 +69,7 @@ function AudioCard() {
   }, [currentTrack]);
 
   return (
-    <motion.div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 relative overflow-hidden group flex flex-col justify-between bg-[#1db954]/5 hover:bg-[#1db954]/10 transition-all duration-300 backdrop-blur-md">
+    <motion.div className="p-6 rounded-2xl border border-white/10 relative overflow-hidden group flex flex-col justify-between bg-[#1db954]/5 hover:bg-[#1db954]/10 transition-all duration-300 backdrop-blur-md">
       {/* Hidden Audio Element */}
       <audio ref={audioRef} loop>
         <source src={TRACKS[currentTrack].src} type="audio/mpeg" />

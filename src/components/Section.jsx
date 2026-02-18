@@ -156,8 +156,8 @@ const Section = () => {
           >
             <div className="relative w-full h-full bg-gradient-to-b from-gray-900 via-gray-800 to-black">
               <img
-                src="src\assets\Background Images\pic-1.jpeg"
-                alt="Mohammad Faiz - Interface"
+                src="https://images5.alphacoders.com/334/thumb-1920-334985.jpg"
+                alt="Mohammad Faiz"
                 loading="eager"
                 fetchpriority="high"
                 decoding="async"

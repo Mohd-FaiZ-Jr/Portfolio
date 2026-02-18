@@ -15,166 +15,179 @@ import {
 import { HiMail, HiX } from "react-icons/hi";
 import Footer from "./Footer";
 
+const ICON_MAP = {
+  react: SiReact,
+  tailwind: SiTailwindcss,
+  firebase: SiFirebase,
+  python: SiPython,
+  html: SiHtml5,
+  css: SiCss3,
+  javascript: SiJavascript,
+  maps: SiGooglemaps,
+};
+
 const PROJECTS_DATA = [
-    {
-      id: 1,
-      title: "MENUMATE",
-      category: "fullstack",
-      description:
-        "A full-stack hostel dining and student engagement platform used by real students. Features include mess menu, blogs, contests, explore section, and notifications. Built and continuously improved based on student feedback.",
-      image:
-        "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=800&q=80",
-      tags: ["React", "Tailwind", "Firebase", "Recoil"],
-      icons: [SiReact, SiTailwindcss, SiFirebase],
-      github: "https://github.com/Mohd-FaiZ-Jr/Menu-Mate",
-      demo: "https://menumate.live",
-      status: "active",
-      featured: true,
+  {
+    id: 1,
+    title: "MENUMATE",
+    category: "fullstack",
+    description:
+      "A full-stack hostel dining and student engagement platform used by real students. Features include mess menu, blogs, contests, explore section, and notifications. Built and continuously improved based on student feedback.",
+    image:
+      "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=800&q=80",
+    tags: ["React", "Tailwind", "Firebase", "Recoil"],
+    icons: ["react", "tailwind", "firebase"],
+    github: "https://github.com/Mohd-FaiZ-Jr/Menu-Mate",
+    demo: "https://menumate.live",
+    status: "active",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "DHARMAVERSE",
+    category: "web",
+    description:
+      "Virtual tourism platform for monasteries of Sikkim with 360° tours, AR overlays, interactive maps, and multilingual narration.",
+    image:
+      "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
+    tags: ["React", "Tailwind", "AR", "WebXR"],
+    icons: ["react", "tailwind"],
+    github: "https://github.com/Mohd-FaiZ-Jr/DharmaVerse",
+    demo: "https://dharmaverse.vercel.app",
+    status: "active",
+    featured: true,
+  },
+  // {
+  //   id: 3,
+  //   title: "CAMPUSNEST",
+  //   category: "fullstack",
+  //   description:
+  //     "Student-focused rental housing platform helping students find affordable homes and giving property owners online visibility.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+  //   tags: ["React", "Tailwind"],
+  //   icons: [SiReact, SiTailwindcss],
+  //   github: "https://github.com",
+  //   demo: "https://example.com",
+  //   status: "development",
+  //   featured: true,
+  // },
+  {
+    id: 4,
+    title: "FILENEST",
+    category: "fullstack",
+    description:
+      "Automated File Management System that organizes academic files using image processing and content analysis.",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+    tags: ["React", "Tailwind", "Python", "Automation"],
+    icons: ["react", "tailwind", "python"],
+    github: "https://github.com/Mohd-FaiZ-Jr/FileNest",
+    demo: "",
+    status: "development",
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "PARKINGMITRA",
+    category: "concept",
+    description:
+      "AI-powered parking system using computer vision (YOLO) to monitor parking alignment and assist drivers in real-time.",
+    image:
+      "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&q=80",
+    tags: ["Python", "Computer Vision"],
+    icons: ["python"],
+    github: "",
+    demo: "",
+    status: "concept",
+    featured: false,
+    briefing: {
+      objective:
+        "To eliminate parking inefficiencies in dense urban areas using edge AI and real-time vision processing.",
+      techStack: "Python, YOLOv8, OpenCV, Raspberry Pi",
+      challenges:
+        "Processing high-resolution video streams on low-power edge devices while maintaining sub-second latency for alignment detection.",
+      solutions:
+        "Implemented quantized YOLO models and frame-skipping algorithms to optimize processing speed without sacrificing accuracy.",
+      timeline: "Phase 1: Alignment Detection (Q4 2024)",
+      vision:
+        "A fully autonomous parking lot manager that communicates directly with smart vehicle HUDs to guide drivers to the most optimal spot.",
     },
-    {
-      id: 2,
-      title: "DHARMAVERSE",
-      category: "web",
-      description:
-        "Virtual tourism platform for monasteries of Sikkim with 360° tours, AR overlays, interactive maps, and multilingual narration.",
-      image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
-      tags: ["React", "Tailwind", "AR", "WebXR"],
-      icons: [SiReact, SiTailwindcss],
-      github: "https://github.com/Mohd-FaiZ-Jr/DharmaVerse",
-      demo: "https://dharmaverse.vercel.app",
-      status: "active",
-      featured: true,
+  },
+  {
+    id: 6,
+    title: "NOTESPARK",
+    category: "web",
+    description:
+      "Note-taking web application with add, edit, delete, and clear functionality built while learning JavaScript.",
+    image:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
+    tags: ["HTML", "CSS", "JavaScript"],
+    icons: ["html", "css", "javascript"],
+    github: "",
+    demo: "https://notespark.netlify.app/",
+    status: "active",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "PERSONAL PORTFOLIO",
+    category: "web",
+    description:
+      "Personal portfolio website built during early learning phase to practice frontend development.",
+    image:
+      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
+    tags: ["HTML", "CSS", "JavaScript"],
+    icons: ["html", "css", "javascript"],
+    github: "",
+    demo: "https://mohdfaizportfolio.netlify.app",
+    status: "active",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "WHATSAPP MESSENGER",
+    category: "desktop",
+    description:
+      "Desktop messaging application built with Python Tkinter as a Class 12 board project.",
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&q=80",
+    tags: ["Python", "Tkinter"],
+    icons: ["python"],
+    github: "https://github.com/Mohd-FaiZ-Jr/whatsapp-message-scheduler",
+    demo: "",
+    status: "completed",
+    featured: false,
+  },
+  {
+    id: 9,
+    title: "CITY DATA OVERLOAD",
+    category: "concept",
+    description:
+      "AI-powered civic intelligence platform that transforms scattered city data into organized, predictive, and actionable insights using Gemini and Vertex AI. Features live map visualization, anomaly prediction, and automatic escalation tracking.",
+    image:
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+    tags: ["AI", "Gemini", "Vertex AI", "Google Maps", "Firebase", "CivicTech"],
+    icons: ["react", "firebase", "maps"],
+    github: "",
+    demo: "",
+    status: "concept",
+    featured: true,
+    briefing: {
+      objective:
+        "Synthesize city-wide data streams into a unified tactical dashboard for decision makers using advanced LLMs.",
+      techStack:
+        "React, Firebase, Gemini 1.5 Pro, Vertex AI, Google Maps Platform",
+      challenges:
+        "Aggregating highly inconsistent data formats from legacy government systems and sensors into a clean, uniform intelligence stream.",
+      solutions:
+        "Leveraging Gemini's multimodal capabilities to parse unstructured documents/reports and transform them into structured GIS data.",
+      timeline: "R&D Prototype Phase",
+      vision:
+        "Predicting civic infrastructure failures before they occur through multimodal AI analysis and automatic multi-agency coordination.",
     },
-    // {
-    //   id: 3,
-    //   title: "CAMPUSNEST",
-    //   category: "fullstack",
-    //   description:
-    //     "Student-focused rental housing platform helping students find affordable homes and giving property owners online visibility.",
-    //   image:
-    //     "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    //   tags: ["React", "Tailwind"],
-    //   icons: [SiReact, SiTailwindcss],
-    //   github: "https://github.com",
-    //   demo: "https://example.com",
-    //   status: "development",
-    //   featured: true,
-    // },
-    {
-      id: 4,
-      title: "FILENEST",
-      category: "fullstack",
-      description:
-        "Automated File Management System that organizes academic files using image processing and content analysis.",
-      image:
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-      tags: ["React","Tailwind", "Python", "Automation"],
-      icons: [SiReact, SiTailwindcss, SiPython],
-      github: "https://github.com/Mohd-FaiZ-Jr/FileNest",
-      demo: "",
-      status: "development",
-      featured: false,
-    },
-    {
-      id: 5,
-      title: "PARKINGMITRA",
-      category: "concept",
-      description:
-        "AI-powered parking system using computer vision (YOLO) to monitor parking alignment and assist drivers in real-time.",
-      image:
-        "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&q=80",
-      tags: ["Python", "Computer Vision"],
-      icons: [SiPython],
-      github: "",
-      demo: "",
-      status: "concept",
-      featured: false,
-      briefing: {
-        objective: "To eliminate parking inefficiencies in dense urban areas using edge AI and real-time vision processing.",
-        techStack: "Python, YOLOv8, OpenCV, Raspberry Pi",
-        challenges: "Processing high-resolution video streams on low-power edge devices while maintaining sub-second latency for alignment detection.",
-        solutions: "Implemented quantized YOLO models and frame-skipping algorithms to optimize processing speed without sacrificing accuracy.",
-        timeline: "Phase 1: Alignment Detection (Q4 2024)",
-        vision: "A fully autonomous parking lot manager that communicates directly with smart vehicle HUDs to guide drivers to the most optimal spot."
-      }
-    },
-    {
-      id: 6,
-      title: "NOTESPARK",
-      category: "web",
-      description:
-        "Note-taking web application with add, edit, delete, and clear functionality built while learning JavaScript.",
-      image:
-        "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
-      tags: ["HTML", "CSS", "JavaScript"],
-      icons: [SiHtml5, SiCss3, SiJavascript],
-      github: "",
-      demo: "https://notespark.netlify.app/",
-      status: "active",
-      featured: false,
-    },
-    {
-      id: 7,
-      title: "PERSONAL PORTFOLIO",
-      category: "web",
-      description:
-        "Personal portfolio website built during early learning phase to practice frontend development.",
-      image:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
-      tags: ["HTML", "CSS", "JavaScript"],
-      icons: [SiHtml5, SiCss3, SiJavascript],
-      github: "",
-      demo: "https://mohdfaizportfolio.netlify.app",
-      status: "active",
-      featured: false,
-    },
-    {
-      id: 8,
-      title: "WHATSAPP MESSENGER",
-      category: "desktop",
-      description:
-        "Desktop messaging application built with Python Tkinter as a Class 12 board project.",
-      image:
-        "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&q=80",
-      tags: ["Python", "Tkinter"],
-      icons: [SiPython],
-      github: "https://github.com/Mohd-FaiZ-Jr/whatsapp-message-scheduler",
-      demo: "",
-      status: "completed",
-      featured: false,
-    },
-    {
-      id: 9,
-      title: "CITY DATA OVERLOAD",
-      category: "concept",
-      description:
-        "AI-powered civic intelligence platform that transforms scattered city data into organized, predictive, and actionable insights using Gemini and Vertex AI. Features live map visualization, anomaly prediction, and automatic escalation tracking.",
-      image:
-        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
-      tags: [
-        "AI",
-        "Gemini",
-        "Vertex AI",
-        "Google Maps",
-        "Firebase",
-        "CivicTech",
-      ],
-      icons: [SiReact, SiFirebase, SiGooglemaps],
-      github: "",
-      demo: "",
-      status: "concept",
-      featured: true,
-      briefing: {
-        objective: "Synthesize city-wide data streams into a unified tactical dashboard for decision makers using advanced LLMs.",
-        techStack: "React, Firebase, Gemini 1.5 Pro, Vertex AI, Google Maps Platform",
-        challenges: "Aggregating highly inconsistent data formats from legacy government systems and sensors into a clean, uniform intelligence stream.",
-        solutions: "Leveraging Gemini's multimodal capabilities to parse unstructured documents/reports and transform them into structured GIS data.",
-        timeline: "R&D Prototype Phase",
-        vision: "Predicting civic infrastructure failures before they occur through multimodal AI analysis and automatic multi-agency coordination."
-      }
-    },
-  ];
+  },
+];
 
 const FILTERS = [
   { id: "all", label: "Global Systems" },
@@ -191,10 +204,19 @@ const CONTAINER_VARIANTS = {
 
 const ITEM_VARIANTS = {
   hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] } },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] },
+  },
 };
 
-const LAYOUT_TRANSITION = { type: "spring", damping: 25, stiffness: 120, mass: 1 };
+const LAYOUT_TRANSITION = {
+  type: "spring",
+  damping: 25,
+  stiffness: 120,
+  mass: 1,
+};
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -219,7 +241,7 @@ const Projects = () => {
       activeFilter === "all"
         ? PROJECTS_DATA
         : PROJECTS_DATA.filter((p) => p.category === activeFilter),
-    [activeFilter]
+    [activeFilter],
   );
 
   const handleFilterClick = useCallback((e, filterId) => {
@@ -228,7 +250,10 @@ const Projects = () => {
     if (container) {
       const button = e.currentTarget;
       container.scrollTo({
-        left: button.offsetLeft - container.clientWidth / 2 + button.clientWidth / 2,
+        left:
+          button.offsetLeft -
+          container.clientWidth / 2 +
+          button.clientWidth / 2,
         behavior: "smooth",
       });
     }
@@ -295,11 +320,17 @@ const Projects = () => {
 
                       {/* Scanline - Precise fit for selected option, mobile only */}
                       {isActive && (
-                        <motion.div animate={{ x: ["-120%", "120%"] }} transition={{ duration: 2.8, repeat: Infinity, ease: "linear", }}
-                        className="absolute inset-0 overflow-hidden rounded-md sm:rounded-lg pointer-events-none md:hidden">
-                          <div className="h-full w-1/3 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent skew-x-[20deg] blur-[1px] will-change-transform transform-gpu"/>
+                        <motion.div
+                          animate={{ x: ["-120%", "120%"] }}
+                          transition={{
+                            duration: 2.8,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
+                          className="absolute inset-0 overflow-hidden rounded-md sm:rounded-lg pointer-events-none md:hidden"
+                        >
+                          <div className="h-full w-1/3 bg-gradient-to-r from-transparent via-cyan-400/10 to-transparent skew-x-[20deg] blur-[1px] will-change-transform transform-gpu" />
                         </motion.div>
-
                       )}
 
                       {/* Text content with orbitron font */}
@@ -367,18 +398,21 @@ const Projects = () => {
                         {project.status}
                       </span>
                     </div>{" "}
-                      {/* Tech Badge Overlay */}
-                      <div className="absolute bottom-4 left-4 z-20 flex gap-2">
-                        {project.icons.map((Icon, idx) => (
+                    {/* Tech Badge Overlay */}
+                    <div className="absolute bottom-4 left-4 z-20 flex gap-2">
+                      {project.icons.map((iconName, idx) => {
+                        const Icon = ICON_MAP[iconName];
+                        return (
                           <div
                             key={idx}
                             className="p-2 bg-black/40 backdrop-blur-md rounded-lg border border-white/10 text-white hover:text-cyan-400 transition-colors"
                           >
-                            <Icon size={14} />
+                            <Icon key={idx} size={14} />
                           </div>
-                        ))}
-                      </div>
-                    </div>{" "}
+                        );
+                      })}
+                    </div>
+                  </div>{" "}
                   {/* Content Section */}
                   <div className="p-6 space-y-4">
                     <h3 className="text-xl font-orbitron font-bold text-white tracking-wide group-hover:text-cyan-400 transition-colors">
@@ -411,7 +445,7 @@ const Projects = () => {
                           <BsGithub size={14} /> Data Loop
                         </motion.a>
                       )}
-                      
+
                       {project.status === "concept" ? (
                         <motion.button
                           onClick={() => setSelectedProject(project)}
@@ -421,16 +455,18 @@ const Projects = () => {
                         >
                           Strategic Briefing <BsArrowRight size={14} />
                         </motion.button>
-                      ) : project.demo && (
-                        <motion.a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noreferrer"
-                          whileHover={{ y: -2 }}
-                          className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center gap-2 text-[10px] font-orbitron font-bold text-white tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:shadow-[0_0_25px_rgba(0,229,255,0.25)] transition-all"
-                        >
-                          Deploy Hub <BsBoxArrowUpRight size={12} />
-                        </motion.a>
+                      ) : (
+                        project.demo && (
+                          <motion.a
+                            href={project.demo}
+                            target="_blank"
+                            rel="noreferrer"
+                            whileHover={{ y: -2 }}
+                            className="flex-1 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center gap-2 text-[10px] font-orbitron font-bold text-white tracking-[0.2em] uppercase shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:shadow-[0_0_25px_rgba(0,229,255,0.25)] transition-all"
+                          >
+                            Deploy Hub <BsBoxArrowUpRight size={12} />
+                          </motion.a>
+                        )
                       )}
                     </div>
                   </div>
@@ -476,7 +512,6 @@ const Projects = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Strategic Briefing Modal */}
       <AnimatePresence>
         {selectedProject && (
@@ -561,10 +596,12 @@ const Projects = () => {
 
                   <section className="space-y-4">
                     <h5 className="flex items-center gap-2 text-xs font-orbitron font-bold text-cyan-400 uppercase tracking-widest">
-                      <div className="w-1 h-3 bg-cyan-500" /> Executive Objective
+                      <div className="w-1 h-3 bg-cyan-500" /> Executive
+                      Objective
                     </h5>
                     <p className="text-gray-300 font-rajdhani text-lg leading-relaxed md:pr-10">
-                      {selectedProject.briefing?.objective || selectedProject.description}
+                      {selectedProject.briefing?.objective ||
+                        selectedProject.description}
                     </p>
                   </section>
 
@@ -582,7 +619,8 @@ const Projects = () => {
                   {selectedProject.briefing?.solutions && (
                     <section className="space-y-4">
                       <h5 className="flex items-center gap-2 text-xs font-orbitron font-bold text-cyan-400 uppercase tracking-widest">
-                        <div className="w-1 h-3 bg-cyan-500" /> Tactical Solutions
+                        <div className="w-1 h-3 bg-cyan-500" /> Tactical
+                        Solutions
                       </h5>
                       <p className="text-gray-300 font-rajdhani text-base leading-relaxed md:pr-10">
                         {selectedProject.briefing.solutions}
@@ -616,7 +654,7 @@ const Projects = () => {
                   Encrypted Stark-Link Stabilized
                 </span>
                 <div className="flex gap-4">
-                   <motion.button
+                  <motion.button
                     type="button"
                     onClick={closeModal}
                     whileHover={{ scale: 1.05 }}
@@ -638,7 +676,6 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       <Footer />
     </div>
   );

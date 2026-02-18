@@ -129,7 +129,7 @@ const About = () => {
               <span className="text-[10px] font-orbitron text-gray-500 tracking-[0.2em] uppercase">
                 Identification Code
               </span>
-              <span className="text-xl md:text-2xl font-orbitron font-bold text-white tracking-widest text-cyan-400">
+              <span className="text-xl md:text-2xl font-orbitron font-bold text-white tracking-widest">
                 MF-85-VANGUARD
               </span>
             </div>
@@ -429,7 +429,7 @@ const About = () => {
         >
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03]"></div>
           <div className="relative z-10 space-y-4 max-w-xl">
-            <h3 className="text-3xl md:text-4xl font-orbitron font-bold text-white tracking-tighter uppercase italic italic">
+            <h3 className="text-3xl md:text-4xl font-orbitron font-bold text-white tracking-tighter uppercase italic">
               Request <span className="text-cyan-400">Collaboration</span>
             </h3>
             <p className="text-gray-400 font-rajdhani text-lg leading-relaxed">
