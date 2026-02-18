@@ -1,7 +1,6 @@
 import React from "react";
 import Section from "./Section";
 import BentoGrid from "./BentoGrid";
-import Footer from "./Footer";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -28,9 +27,6 @@ const Home = () => {
           <BentoGrid />
         </div>
       </div>
-
-      {/* Footer - Outside to maintain consistency across pages */}
-      <Footer />
     </>
   );
 };

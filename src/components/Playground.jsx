@@ -7,14 +7,6 @@ import {
   BsGearFill,
 } from "react-icons/bs";
 import { FaRobot, FaAtom } from "react-icons/fa";
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
-  SiFramer,
-} from "react-icons/si";
-import Footer from "./Footer";
 
 const EXPERIMENTS = [
     {
@@ -427,7 +419,6 @@ const Playground = () => {
           </div>
         </motion.div>
       </div>
-      <Footer />
     </div>
   );
 };

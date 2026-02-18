@@ -19,7 +19,6 @@ import {
   SiMysql,
 } from "react-icons/si";
 import { HiMail } from "react-icons/hi";
-import Footer from "./Footer";
 
 const SKILLS = {
     frontend: [
@@ -114,11 +113,11 @@ const About = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-md">
                 <span className="w-1.5 h-1.5 bg-cyan-500 rounded-full animate-pulse"></span>
-                <span className="text-[9px] md:text-[10px] font-orbitron font-bold text-cyan-400 tracking-[0.2em] md:tracking-[0.3em] uppercase">
+                <span className="text-[10px] font-orbitron font-bold text-cyan-400 tracking-[0.2em] md:tracking-[0.3em] uppercase">
                   Security Level: Level-04 // M.O
                 </span>
               </div>
-              <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-orbitron text-white tracking-tighter leading-none">
+              <h1 className="text-5xl sm:text-7xl md:text-8xl font-black font-orbitron text-white tracking-tighter leading-none">
                 PERSONNEL <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                   DOSSIER
@@ -129,7 +128,7 @@ const About = () => {
               <span className="text-[10px] font-orbitron text-gray-500 tracking-[0.2em] uppercase">
                 Identification Code
               </span>
-              <span className="text-xl md:text-2xl font-orbitron font-bold text-white tracking-widest">
+              <span className="text-xl md:text-2xl font-orbitron font-bold text-cyan-400/90 tracking-widest">
                 MF-85-VANGUARD
               </span>
             </div>
@@ -443,7 +442,7 @@ const About = () => {
               href="mailto:mohdfaizofficial487@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-cyan-500 text-black font-orbitron font-bold text-xs tracking-[0.2em] rounded-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:shadow-[0_0_45px_rgba(0,229,255,0.5)] transition-all uppercase flex items-center gap-3"
+              className="px-10 py-5 bg-cyan-500 text-black font-orbitron whitespace-nowrap font-bold text-xs tracking-[0.2em] rounded-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:shadow-[0_0_45px_rgba(0,229,255,0.5)] transition-all uppercase flex items-center gap-3"
             >
               Establish Link <HiMail size={20} />
             </motion.a>
@@ -455,7 +454,6 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-      <Footer />
     </div>
   );
 };

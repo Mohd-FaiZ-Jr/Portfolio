@@ -2,6 +2,7 @@ import React, { Suspense, useState, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import SplashScreen from "./components/SplashScreen";
+import Footer from "./components/Footer";
 
 const Home = React.lazy(() => import("./components/Home"));
 const Projects = React.lazy(() => import("./components/Projects"));
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/playground" element={<Playground />} />
           </Routes>
         </Suspense>
+        <Footer/>
       </div>
     </Router>
   );

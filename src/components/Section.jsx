@@ -61,9 +61,9 @@ const Section = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-base sm:text-lg text-gray-400 font-rajdhani leading-relaxed max-w-xl"
             >
-              Crafting high-performance digital architectures with a focus on AI
-              integration and immersive web solutions. Specialized in building
-              scalable applications using{" "}
+              Building modern, responsive web applications with a focus on clean code
+              and seamless user experiences. Specialized in developing functional
+              interfaces using{" "}
               <span className="text-cyan-400 font-semibold">React</span>,{" "}
               <span className="text-cyan-400 font-semibold">Recoil</span>, and{" "}
               <span className="text-cyan-400 font-semibold">Firebase</span>.
@@ -156,7 +156,7 @@ const Section = () => {
           >
             <div className="relative w-full h-full bg-gradient-to-b from-gray-900 via-gray-800 to-black">
               <img
-                src="https://images5.alphacoders.com/334/thumb-1920-334985.jpg"
+                src="src\assets\Background Images\mohammad-faiz.png"
                 alt="Mohammad Faiz"
                 loading="eager"
                 fetchpriority="high"

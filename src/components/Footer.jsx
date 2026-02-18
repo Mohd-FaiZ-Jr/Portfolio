@@ -49,8 +49,8 @@ const Footer = () => {
             <div className="space-y-4">
               <StarkLogo />
               {/* Stark Philosophy Badge */}
-              <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-cyan-900/10 to-transparent border border-cyan-500/10 backdrop-blur-sm relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-[2px] h-full bg-cyan-400/50 group-hover:bg-cyan-400 transition-colors duration-300"></div>
+              <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-cyan-900/10 to-transparent backdrop-blur-sm relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-[2px] h-full bg-cyan-400/50"></div>
                  {/* <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-cyan-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div> */}
                 
                 <div className="flex items-center gap-2 mb-2">

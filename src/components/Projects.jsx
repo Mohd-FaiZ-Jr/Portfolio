@@ -13,7 +13,6 @@ import {
   SiNextdotjs,
 } from "react-icons/si";
 import { HiMail, HiX } from "react-icons/hi";
-import Footer from "./Footer";
 
 const ICON_MAP = {
   react: SiReact,
@@ -499,7 +498,7 @@ const Projects = () => {
               href="mailto:mohdfaizofficial487@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-cyan-500 text-black font-orbitron font-bold text-xs tracking-[0.2em] rounded-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:shadow-[0_0_45px_rgba(0,229,255,0.5)] transition-all uppercase flex items-center gap-3"
+              className="px-10 py-5 bg-cyan-500 text-black font-orbitron whitespace-nowrap font-bold text-xs tracking-[0.2em] rounded-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] hover:shadow-[0_0_45px_rgba(0,229,255,0.5)] transition-all uppercase flex items-center gap-3"
             >
               Initiate Core Link <HiMail size={20} />
             </motion.a>
@@ -676,7 +675,6 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <Footer />
     </div>
   );
 };
